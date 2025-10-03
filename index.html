@@ -55,12 +55,12 @@
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#abstract">Abstracts Booklet</a></li>
           <li><a href="#venue">Venue</a></li>
           <li><a href="#hotels">Hotels</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#team">Our team</a></li>
-          <li class="buy-tickets"><a href="submit.html">Abstract submission</a></li>
           <li class="buy-tickets"><a href="#registration">Registration</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -667,6 +667,31 @@
     </section>
   <!-- Repeat similar blocks for each poster -->
 
+
+    <section id="abstract" class="wow fadeInUp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <div class="section-header mb-4">
+              <h2>Abstract Booklet Talks & Posters</h2>
+            </div>
+            <div id="my-pdf" class="pdfobject-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .pdfobject-container {
+          height: 600px;
+          border: 1px solid #ccc;
+        }
+      </style>
+
+
+    </section>
+
+
+
     </section>
     <!--==========================
       Venue Section
@@ -1135,6 +1160,13 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/pdfobject"></script>
+  <script>
+  PDFObject.embed("vdW_London_2025.pdf", "#my-pdf", {
+    title: "Abstract Booklet",
+    pdfOpenParams: { view: 'Fit', page: '1' }
+  });
+</script>
 </body>
 
 </html>
